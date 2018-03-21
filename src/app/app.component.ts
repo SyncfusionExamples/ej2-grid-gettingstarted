@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GridModule } from '@syncfusion/ej2-ng-grids';
 
 @Component({
   selector: 'app-root',

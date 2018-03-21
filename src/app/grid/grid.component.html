@@ -1,0 +1,18 @@
+
+  <ejs-grid [dataSource]='data' [allowPaging]='true' [allowSorting]='true' [allowFiltering]='true'
+   [allowGrouping]='true' [filterSettings]='filterSettings' [pageSettings]="pageSettings">
+    <e-columns>
+      <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
+      <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+      <e-column field='Freight' textAlign='Right' format='c2' width=120></e-column>
+    </e-columns>
+    <e-aggregates>
+      <e-aggregate>
+          <e-columns>
+              <e-column type="Sum" field="Freight" format="C2">
+                  <ng-template #footerTemplate let-data>Sum: {{data.Sum}}</ng-template>
+              </e-column>
+          </e-columns>
+      </e-aggregate>
+  </e-aggregates>
+  </ejs-grid>
